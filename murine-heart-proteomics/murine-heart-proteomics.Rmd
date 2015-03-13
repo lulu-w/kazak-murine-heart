@@ -1,0 +1,36 @@
+---
+title: "Murine Heart Proteomics"
+author: "Lu Wang"
+output: html_document
+---
+```{r knitrOptions, echo = FALSE, warning = FALSE}
+library(knitr)
+source('function.r')
+
+opts_chunk$set(echo=FALSE)
+options(stringsAsFactors = FALSE)
+```  
+
+```{r}
+library(RColorBrewer)
+tb <- read.delim("./input//temp.csv", header = T, sep = ",")
+c6 <- brewer.pal(6, "Paired")
+c6 <- c6[c(2, 1, 6, 5, 4, 3)]
+epsilon = 1
+```
+
+## 1. Quality Check and Data Cleaning
+
+## Peptide level data
+
+
+```{r}
+pairwiseReg(numCols(tb), title = "Pairwise Correlation of log-transformed Data")
+```
+
+```{r}
+par(las = 2, cex = 0.7)
+barplot(colSums(numCols(tb)), col = c6, main = "Total Library Size", ylab = "Total Intensity")
+
+plotDistribution(numCols(tb)+epsilon, col = c6, "Distribution of libraries")
+```

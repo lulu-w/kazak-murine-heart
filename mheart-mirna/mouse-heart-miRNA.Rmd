@@ -1,0 +1,23 @@
+```{r echo=FALSE}
+library(knitr)
+opts_chunk$set(echo=FALSE)
+```
+
+---
+title: "miRNA Analysis in the Aging Mouse Heart"
+author: "Lu Wang"
+date: "Monday, Feburary 2, 2015"
+output: html_document
+---
+
+# 1. Background
+## Experimental Design
+
+
+## Libraries and Raw Data
+
+
+## 2. RNA-sequencing raw data processing
+
+
+
